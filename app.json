@@ -1,0 +1,44 @@
+{
+  "name": "uh-mafft",
+  "parallelism": "PTHREAD",
+  "version": "7.245",
+  "label": "MAFFT at UH",
+  "shortDescription": "MAFFT at UH",
+  "longDescription": "MAFFT is a multiple sequence alignment program that can utilize multi-core architecture and is avaialbe on the UH HPC",
+  "deploymentPath": "/lus/scratch/seanbc/apps/uh-mafft-7.245",
+  "deploymentSystem": "sftp.lustre.storage.uhhpc1.its.hawaii.edu",
+  "executionSystem": "sb.execute.uhhpc1.its.hawaii.edu",
+  "executionType": "CLI",
+  "templatePath": "wrapper.sh",
+  "testPath": "test/test.sh",
+  "tags": [
+    "demo"
+  ],
+  "ontology": [
+  ],
+  "inputs": [
+    {
+      "id": "input1",
+      "details": {
+        "label": "Input file",
+        "description": "The MAFFT alignment input file - should be a Fasta sequence file"
+      },
+       "semantics":{
+         "ontology":[],
+         "minCardinality":1,
+         "fileTypes":[
+         "TEXT-0"
+        ]
+        },
+         "value": {
+          "default": "agave://sftp.lustre.storage.uhhpc1.its.hawaii.edu/input.fasta",
+          "required": false,
+          "visible": true,
+          "validator": null
+         }
+    }
+  ],
+  "parameters": [
+    
+  ]
+}
